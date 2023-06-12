@@ -1,10 +1,11 @@
 import Onboarding from "./pages/Onboarding";
+import Homepage from "./pages/Homepage";
 
 
 function App() {
   return (
     <div className="App">
-      <Onboarding />
+      <Homepage />
     </div>
   );
 }

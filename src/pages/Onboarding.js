@@ -1,4 +1,3 @@
-
 const Onboarding = () => {
     return (
         <div>
