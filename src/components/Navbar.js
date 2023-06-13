@@ -3,18 +3,18 @@ const Navbar = () => {
         <nav className="navbar" 
              class="
                 flex 
-                bg-slate-300 
+                bg-stone-400
                 justify-between 
                 items-center 
-                sticky 
+                sticky
                 top-0 
                 h-auto 
                 p-2.5 ">
-            <div className="logo" class="bg-slate-50 rounded p-2.5">
-                <p>Ask Lasalle ?</p>
+            <div className="logo" class="bg-emerald-900 rounded p-2.5">
+                <p class="text-white">Ask Lasalle ?</p>
             </div>
             <div className="search" class="w-2/5">
-                <input type="text" placeholder="Search..." class="p-2.5 w-full rounded border-none"/>
+                <input type="text" placeholder="Search..." class="p-2.5 w-full rounded border-none bg-slate-100"/>
             </div>
             <div className="links" 
                  class="

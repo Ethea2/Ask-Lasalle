@@ -5,8 +5,15 @@ const Homepage = () => {
     return ( 
 
         <div className="homepage">
-            <Navbar />
-            <Sidebar />
+            <div className="nav">
+                <Navbar />
+            </div>
+
+            <div className="side" class="mt-14 ml-14 mb-14">
+                <Sidebar />
+            </div>
+            
+            
         </div>
      );
 }
