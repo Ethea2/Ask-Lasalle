@@ -8,7 +8,11 @@ const Sidebar = () => {
             </div>
 
             <div className="sort-dropdown" class="p-4">
-                <button class="bg-emerald-700 p-2 rounded">Hello World!</button>
+                <button class="peer block bg-emerald-700 p-2 rounded-lg w-full hover:rounded-b-none">Sort by...</button>
+                <div className="filters" class="hidden peer-hover:block hover:block bg-white rounded-b-lg py-2">
+                    <p class="block px-4 py-2 hover:bg-slate-200">Upvotes</p>
+                    <p class="block px-4 py-2 hover:bg-slate-200">Comments</p>
+                </div>
             </div>
 
             <div className="tags" class="p-4 flex flex-col gap-4">
