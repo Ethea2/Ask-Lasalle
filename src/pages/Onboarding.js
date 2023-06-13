@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const Onboarding = () => {
     return (
-        <div>
+        <>
             <div className="w-screen h-screen flex items-center justify-center bg-d-lasalle">
                 <div className="w-1/3 text-center">
                     <span className="text-9xl text-white">Ask</span>
@@ -31,7 +31,7 @@ const Onboarding = () => {
                     <div className="mt-12 sticky bottom-0">Don't have an account? <span className="font-bold text-sky-600"><Link to="/signup">Sign-up</Link></span> now!</div>
                 </div>  
             </div>
-        </div>
+        </>
 
     )
 }
