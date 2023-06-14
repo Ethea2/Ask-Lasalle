@@ -19,8 +19,29 @@ const Sidebar = () => {
                 <div className="include-tags" class="bg-stone-300 rounded">
                     <h3 class="bg-stone-500 p-2 rounded-t">INCLUDE...</h3>
                     <div className="list" class="p-2">
-                        <p>College</p>
-                        <p>Department</p>
+
+                        <div className="college-list">
+                            <p class="peer block">College</p>
+                            <div className="college-filters" class="hidden peer-hover:block hover:block bg-white rounded-lg py-2 px-1.5">
+                                <p>Computer Studies</p>
+                                <p>Education</p>
+                                <p>Business</p>
+                                <p>Liberal Arts</p>
+                                <p>Economics</p>
+                                <p>Science</p>
+                                <p>Engineering</p>
+                            </div>
+                        </div>
+                        
+                        <div className="dept-list">
+                            <p class="peer block">Department</p>
+                            <div className="dept-filters" class="hidden peer-hover:block hover:block bg-white rounded-lg py-2 px-1.5">
+                                <p>Department 1</p>
+                                <p>Department 2</p>
+                                <p>Department 3</p>
+                            </div>
+                        </div>
+                        
                         <p>Degree Program</p>
                         <p>University Processes</p>
                         <p>Type of Concern</p>
@@ -30,7 +51,19 @@ const Sidebar = () => {
                 <div className="exclude-tags" class="bg-stone-300 rounded">
                     <h3 class="bg-stone-500 p-2 rounded-t">EXCLUDE...</h3>
                     <div className="list" class="p-2">
-                        <p>College</p>
+                    <div className="college-list">
+                            <p class="peer block">College</p>
+                            <div className="college-filters" class="hidden peer-hover:block hover:block bg-white rounded-lg py-2 px-1.5">
+                                <p>Computer Studies</p>
+                                <p>Education</p>
+                                <p>Business</p>
+                                <p>Liberal Arts</p>
+                                <p>Economics</p>
+                                <p>Science</p>
+                                <p>Engineering</p>
+                            </div>
+                        </div>
+
                         <p>Department</p>
                         <p>Degree Program</p>
                         <p>University Processes</p>
