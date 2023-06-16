@@ -1,7 +1,7 @@
 const Sidebar = () => {
     return ( 
 
-        <div className="sidebar" class="w-1/5 bg-stone-400 rounded">
+        <div className="sidebar" class="w-full bg-stone-400 rounded">
 
             <div className="heading" class="bg-emerald-900 w-full p-4 rounded-t">
                 <p class="text-white text-bold">Tags and Filters</p>
