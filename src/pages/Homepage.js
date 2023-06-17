@@ -44,8 +44,9 @@ const Homepage = () => {
     return (
         <>
             <div className="nav">
-                <Navbar />
+                <Navbar /> 
             </div>
+
             <div className="homepage flex">
                 <div className="w-80 m-14">
                     <Sidebar />
