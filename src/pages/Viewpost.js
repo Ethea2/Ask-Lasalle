@@ -3,6 +3,7 @@ import useFetchPost from "../hooks/useFetchPost";
 const Viewpost = () => {
     const { postid } = useParams()
     const { data, isLoading, errorLoading } = useFetchPost('http://localhost:8000/posts', postid)
+    console.log(data)
     return (
         <>
             {errorLoading && <div>{errorLoading}</div>}

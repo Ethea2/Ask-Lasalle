@@ -30,5 +30,28 @@
             "comments": 241,
             "user": "andee"
         }
+    ],
+
+    "users" : [
+        {
+            "user": "nathan",
+            "posts" : 32
+        },
+        {
+            "user": "patty",
+            "posts" : 32
+        },
+        {
+            "user": "matt",
+            "posts" : 32
+        },
+        {
+            "user": "jex",
+            "posts" : 32
+        },
+        {
+            "user": "andee",
+            "posts" : 32
+        }
     ]
 }

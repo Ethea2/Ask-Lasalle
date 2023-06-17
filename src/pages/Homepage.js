@@ -23,7 +23,7 @@ const Homepage = () => {
                     { data &&
                         data.map((post) => {
                             return (
-                                <Link to={'/viewpost/' + post.postid}><Postcard post={post} key={post.postid}></Postcard></Link>
+                                <Postcard post={post} key={post.postid}></Postcard>
                             )
                         })
                     }

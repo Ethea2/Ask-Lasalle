@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-const useFetchPost = (url, postid) => {
-    const [data, setData] = useState()
+const useFetchUser = (url, username) => {
+    const [user, setUser] = useState()
     const [isLoading, setIsLoading] = useState(true)
     const [errorLoading, setErrorLoading] = useState()
-
     useEffect(() => {
         fetch(url)
             .then(res => {
@@ -13,8 +12,8 @@ const useFetchPost = (url, postid) => {
                 return res.json()
             })
             .then(data => {
-                setData(data.find((post) => {
-                    return post.postid == postid
+                setUser(data.find((user) => {
+                    return user.user == username
                 }))
                 setIsLoading(false)
             })
@@ -23,8 +22,8 @@ const useFetchPost = (url, postid) => {
                 setIsLoading(false)
             })
     })
-    
-    return { data, isLoading, errorLoading }
+    return { user, isLoading, errorLoading }
+
 }
 
-export default useFetchPost;
+export default useFetchUser;
