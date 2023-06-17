@@ -1,5 +1,4 @@
 
-
 const Postcard = ({ post }) => {
     return (
         <>
