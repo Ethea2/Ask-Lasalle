@@ -31,8 +31,8 @@ const Postcard = ({ post }) => {
                 <div className="w-full divide-y divide-black/[.30] p-2 pl-6">
                     <div className="flex h-1/3 pt-3"> {/*poster div */}
                         <div className="rounded-full w-7 h-7 overflow-hidden">
-                            <img src="https://www.shutterstock.com/image-illustration/cybernetic-visions-reloaded-3d-illustration-600w-1555158278.jpg"
-                                className="object-cover"></img>
+                            <img src={post.img}
+                                className="object-fill"></img>
                         </div>
                         <div className="ml-4">
                             Posted by <span className="text-d-lasalle font-bold">@{post.user}</span>
