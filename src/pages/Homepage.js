@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 
 const Homepage = () => {
     const {data, isLoading, errorLoading} = useFetch('http://localhost:8000/posts')
+    
     return (
         <>
             <div className="nav">

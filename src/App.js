@@ -4,15 +4,16 @@ import Signup from "./pages/Signup";
 import Homepage from "./pages/Homepage";
 import Viewpost from "./pages/Viewpost";
 import Viewprofile from "./pages/Viewprofile";
+import Createpost from "./pages/Createpost";
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        {/* <Route path='/' element={<Createpost/>} /> */}
         <Route path='/' element={<Onboarding />} />
         <Route path='/signup' element={<Signup/>} />
         <Route path='/homepage' element={<Homepage />} />
+        <Route path='/createpost' element={<Createpost />} />
         <Route path='/viewpost/:postid' element={<Viewpost />} />
         <Route path='/viewprofile/:username' element={<Viewprofile />} />
       </Routes>
