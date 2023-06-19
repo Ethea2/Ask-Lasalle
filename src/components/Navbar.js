@@ -9,7 +9,8 @@ const Navbar = () => {
                 sticky
                 top-0 
                 h-auto 
-                p-2.5 ">
+                p-2.5
+                overflow-hidden">
             <div className="logo" class="bg-emerald-900 rounded p-2.5">
                 <p class="text-white">Ask Lasalle ?</p>
             </div>

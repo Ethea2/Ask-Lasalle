@@ -2,7 +2,7 @@ import useFetch from "../hooks/useFetch"
 import Navbar from "../components/Navbar";
 import Postcard from "../components/Postcard";
 import Sidebar from "../components/Sidebar";
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 const Homepage = () => {
     const {data, isLoading, errorLoading} = useFetch('http://localhost:8000/posts')

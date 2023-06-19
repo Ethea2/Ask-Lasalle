@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 const useFetchPost = (url, postid) => {
     const [data, setData] = useState()
     const [isLoading, setIsLoading] = useState(true)

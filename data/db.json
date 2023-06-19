@@ -34,12 +34,30 @@
             "comments": 241,
             "user": "andee",
             "img": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8&w=1000&q=80"
+        },
+        {
+            "postid": 6,
+            "title": "How do you get the girl?",
+            "comments": 15,
+            "user": "nathan",
+            "img": "https://www.shutterstock.com/image-illustration/cybernetic-visions-reloaded-3d-illustration-600w-1555158278.jpg"
+        },
+        {
+            "postid": 7,
+            "title": "Do you have a cat?",
+            "comments": 1,
+            "user": "nathan",
+            "img": "https://www.shutterstock.com/image-illustration/cybernetic-visions-reloaded-3d-illustration-600w-1555158278.jpg"
         }
     ],
     "users": [
         {
+            "displayName": "Nathan Andres",
             "user": "nathan",
-            "posts": 32
+            "bio": "hi I’m nathan! nice to meet you, let’s be good friends :)",
+            "posts": 32,
+            "img": "https://www.shutterstock.com/image-illustration/cybernetic-visions-reloaded-3d-illustration-600w-1555158278.jpg"
+            
         },
         {
             "user": "patty",
