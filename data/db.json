@@ -5,7 +5,28 @@
             "title": "Where can I find agno?",
             "comments": 30,
             "user": "nathan",
-            "img": "https://www.shutterstock.com/image-illustration/cybernetic-visions-reloaded-3d-illustration-600w-1555158278.jpg"
+            "img": "https://www.shutterstock.com/image-illustration/cybernetic-visions-reloaded-3d-illustration-600w-1555158278.jpg",
+
+            "postcomments": [
+                {
+                    "commentid": 1,
+                    "user": "patty",
+                    "comment": "Ang dami mong hinahanap andito lang naman ako",
+                    "numComments": 1
+                },
+                {
+                    "commentid": 2,
+                    "user": "patty",
+                    "comment": "you're so cool hehehehe",
+                    "numComments": 1
+                },
+                {
+                    "commentid": 3,
+                    "user": "patty",
+                    "comment": "hey do you have a spotify?",
+                    "numComments": 1
+                }
+            ]
         },
         {
             "postid": 2,
@@ -51,29 +72,29 @@
         }
     ],
     "users": [
-        {
-            "displayName": "Nathan Andres",
-            "user": "nathan",
-            "bio": "hi I’m nathan! nice to meet you, let’s be good friends :)",
-            "posts": 32,
-            "img": "https://www.shutterstock.com/image-illustration/cybernetic-visions-reloaded-3d-illustration-600w-1555158278.jpg"
-            
-        },
-        {
-            "user": "patty",
-            "posts": 32
-        },
-        {
-            "user": "matt",
-            "posts": 32
-        },
-        {
-            "user": "jex",
-            "posts": 32
-        },
-        {
-            "user": "andee",
-            "posts": 32
-        }
-    ]
+                {
+                    "displayName": "Nathan Andres",
+                    "user": "nathan",
+                    "bio": "hi I’m nathan! nice to meet you, let’s be good friends :)",
+                    "posts": 32,
+                    "img": "https://www.shutterstock.com/image-illustration/cybernetic-visions-reloaded-3d-illustration-600w-1555158278.jpg"
+                    
+                },
+                {
+                    "user": "patty",
+                    "posts": 32
+                },
+                {
+                    "user": "matt",
+                    "posts": 32
+                },
+                {
+                    "user": "jex",
+                    "posts": 32
+                },
+                {
+                    "user": "andee",
+                    "posts": 32
+                }
+            ]
 }
