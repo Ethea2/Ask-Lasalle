@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-const Postcard = ({ post }) => {
+const Postcard = ({ post, user }) => {
     return (
         <>
             <div className="w-auto h-44 bg-lasalle-white flex m-4 rounded p-1">
