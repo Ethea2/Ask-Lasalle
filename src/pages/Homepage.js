@@ -16,7 +16,7 @@ const Homepage = () => {
                 <div className="w-80 m-14">
                     <Sidebar />
                 </div>
-                <div className="flex-col w-2/3 mt-14">
+                <div className="flex-col w-2/3 mt-14 mr-14">
                     {errorLoading && <div>{errorLoading}</div>}
                     {isLoading && <div>loading...</div>}
                     { data &&

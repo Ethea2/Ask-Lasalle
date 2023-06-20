@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 const Postcard = ({ post }) => {
     return (
         <>
-            <div className="postcard" class="h-44 bg-lasalle-white flex rounded-2xl mx-4 mb-4">
+            <div className="postcard" class="h-44 bg-lasalle-white flex rounded-2xl ml-4 mb-4">
                 <div className="votes" class="w-1/6 flex flex-col rounded-2xl">
                     <div className="upvote-div" class="flex place-content-center items-center w-full h-1/2 bg-green-upvote rounded-tl-2xl">
                         <svg xmlns="http://www.w3.org/2000/svg" className="bg-inherit" width="30px" height="30px" viewBox="0 0 512 512" version="1.1">
