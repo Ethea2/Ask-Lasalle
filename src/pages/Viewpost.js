@@ -1,13 +1,18 @@
 import { useParams } from "react-router-dom";
 import useFetchPost from "../hooks/useFetchPost";
 import Comment from "../components/Comment";
+import { useEffect, useState } from "react";
 
 const Viewpost = () => {
     const { postid } = useParams()
-    const { postcomments } = useParams()
     const { data, isLoading, errorLoading } = useFetchPost('http://localhost:8000/posts', postid)
-    const { commentData, commentLoading, commentError} = useFetchPost('http://localhost:8000/posts', postcomments)
-    
+    const [comments, setComments] = useState()
+    useEffect(() => {
+        if (isLoading === false) {
+
+            setComments(data.postcomments)
+        }
+    }, [isLoading])
     return (
         <>
             {errorLoading && <div>{errorLoading}</div>}
@@ -28,19 +33,22 @@ const Viewpost = () => {
                     </div>
                 </div>
             }
+            <div className="flex gap-4 flex-col">
 
-            {commentError && <div>{commentError}</div>}
-            {commentLoading && <div>loading...</div>}
-            {commentData && commentData.map((data)=>{
-            return (
-                <div className="user-posts" class="w-3/4 m-auto mt-8 mb-8">
-                    <div className="filtered">
-                        <Comment post={data} key={data.commentid}></Comment>
-                    </div>
-                </div>
-                
-            )
-        })}
+                {
+                    comments && comments.map((comment) => {
+                        return (
+                            <div>
+                                <ol>
+                                    <li>{comment.user}</li>
+                                    <li>{comment.comment}</li>
+                                    <li>{comment.commentid}</li>
+                                </ol>
+                            </div>
+                        )
+                    })
+                }
+            </div>
 
         </>
     )
