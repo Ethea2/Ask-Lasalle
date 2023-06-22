@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
-const useFetchUser = (url, username) => {
-    const [user, setUser] = useState()
-    const [isLoading, setIsLoading] = useState(true)
-    const [errorLoading, setErrorLoading] = useState()
+const useFetchFiltered = (url, user) => {
+    const [dataFiltered, setData] = useState()
+    const [isLoadingFiltered, setIsLoading] = useState(true)
+    const [errorLoadingFiltered, setErrorLoading] = useState()
 
     useEffect(() => {
         fetch(url)
@@ -14,9 +14,7 @@ const useFetchUser = (url, username) => {
                 return res.json()
             })
             .then(data => {
-                setUser(data.find((user) => {
-                    return user.user === username
-                }))
+                setData(data.filter((post) => post.user === user))
                 setIsLoading(false)
             })
             .catch(err => {
@@ -24,8 +22,8 @@ const useFetchUser = (url, username) => {
                 setIsLoading(false)
             })
     })
-    return { user, isLoading, errorLoading }
-
+    
+    return { dataFiltered, isLoadingFiltered, errorLoadingFiltered }
 }
 
-export default useFetchUser;
+export default useFetchFiltered;
