@@ -2,60 +2,67 @@ import { Link } from 'react-router-dom'
 const Postcard = ({ post, user }) => {
     return (
         <>
-            <div className="postcard" class="h-48 bg-lasalle-white flex rounded-2xl m-auto mb-4">
-                <div className="votes" class="w-1/6 flex flex-col rounded-2xl">
-                    <div className="upvote-div" class="flex place-content-center items-center w-full h-1/2 bg-green-upvote rounded-tl-2xl">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="bg-inherit" width="30px" height="30px" viewBox="0 0 512 512" version="1.1">
-                            <title>triangle-filled</title>
-                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g id="drop" fill="#000000" transform="translate(32.000000, 42.666667)">
-                                    <path d="M246.312928,5.62892705 C252.927596,9.40873724 258.409564,14.8907053 262.189374,21.5053731 L444.667042,340.84129 C456.358134,361.300701 449.250007,387.363834 428.790595,399.054926 C422.34376,402.738832 415.04715,404.676552 407.622001,404.676552 L42.6666667,404.676552 C19.1025173,404.676552 7.10542736e-15,385.574034 7.10542736e-15,362.009885 C7.10542736e-15,354.584736 1.93772021,347.288125 5.62162594,340.84129 L188.099293,21.5053731 C199.790385,1.04596203 225.853517,-6.06216498 246.312928,5.62892705 Z" id="Combined-Shape">
-                                    </path>
-                                </g>
-                            </g>
-                        </svg>
-                    </div>
-                    <div className="downvote-div" class="rotate-180 flex place-content-center items-center w-full h-1/2 bg-red-downvote rounded-tr-2xl">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="bg-inherit" width="30px" height="30px" viewBox="0 0 512 512" version="1.1">
-                            <title>triangle-filled</title>
-                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g id="drop" fill="#000000" transform="translate(32.000000, 42.666667)">
-                                    <path d="M246.312928,5.62892705 C252.927596,9.40873724 258.409564,14.8907053 262.189374,21.5053731 L444.667042,340.84129 C456.358134,361.300701 449.250007,387.363834 428.790595,399.054926 C422.34376,402.738832 415.04715,404.676552 407.622001,404.676552 L42.6666667,404.676552 C19.1025173,404.676552 7.10542736e-15,385.574034 7.10542736e-15,362.009885 C7.10542736e-15,354.584736 1.93772021,347.288125 5.62162594,340.84129 L188.099293,21.5053731 C199.790385,1.04596203 225.853517,-6.06216498 246.312928,5.62892705 Z" id="Combined-Shape">
-                                    </path>
-                                </g>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
+            <div className="postcard" class="h-48 bg-light-blue-gray flex rounded-2xl m-auto mb-4">
+                
                 <div className="post-container" class="w-full p-4 flex flex-col justify-between">
-                    
                     <div className="user-info "class="w-full p-2 h-1/4 flex gap-2">
                         <div className="rounded-full w-7 h-7 overflow-hidden">
-                            <img src={post.img}
-                                class="block object-cover"></img>
+                            <img src={post.img} class="block object-cover"></img>
                         </div>
+                        
                         <div className="user-details" class="">
                             <Link to={'/viewprofile/' + post.user}>
                                     <p>Posted by <span className="text-d-lasalle font-bold">@{post.user}</span></p>
                             </Link>
-                        </div>
-                        
+                        </div>   
                     </div>
 
                     <hr class="bg-neutral-500 m-2 mt-4 h-0.5"></hr>
 
                     <div className="post-content" class="p-2 flex flex-col justify-between overflow-hidden">
+
                         <div className="post-preview" class="h-2/4">
                             <Link to={'/viewpost/' + post.postid} class="text-2xl font-bold">
                                 <p>{post.title}</p>
                             </Link>
                         </div>
-                        <div className="interaction-options" class="flex justify-between mt-6">
-                            
-                            <div className="comments" class="flex gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="my-auto"><path d="M13,11H7a1,1,0,0,0,0,2h6a1,1,0,0,0,0-2Zm4-4H7A1,1,0,0,0,7,9H17a1,1,0,0,0,0-2Zm2-5H5A3,3,0,0,0,2,5V15a3,3,0,0,0,3,3H16.59l3.7,3.71A1,1,0,0,0,21,22a.84.84,0,0,0,.38-.08A1,1,0,0,0,22,21V5A3,3,0,0,0,19,2Zm1,16.59-2.29-2.3A1,1,0,0,0,17,16H5a1,1,0,0,1-1-1V5A1,1,0,0,1,5,4H19a1,1,0,0,1,1,1Z" /></svg>
-                                <p class="">{post.comments}</p>
+                        
+                        <div className="interaction-options" class="flex justify-between mt-8">
+
+                            <div className="votes-replies" class="flex gap-12">
+                                <div className="votes" class="flex justify-between gap-4">
+                                    <div className="upvotes">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="bg-inherit" width="20px" height="20px" viewBox="0 0 512 512" version="1.1">
+                                        <title>triangle-filled</title>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="drop" fill="#000000" transform="translate(32.000000, 42.666667)">
+                                            <path d="M246.312928,5.62892705 C252.927596,9.40873724 258.409564,14.8907053 262.189374,21.5053731 L444.667042,340.84129 C456.358134,361.300701 449.250007,387.363834 428.790595,399.054926 C422.34376,402.738832 415.04715,404.676552 407.622001,404.676552 L42.6666667,404.676552 C19.1025173,404.676552 7.10542736e-15,385.574034 7.10542736e-15,362.009885 C7.10542736e-15,354.584736 1.93772021,347.288125 5.62162594,340.84129 L188.099293,21.5053731 C199.790385,1.04596203 225.853517,-6.06216498 246.312928,5.62892705 Z" id="Combined-Shape">
+                                            </path>
+                                        </g>
+                                        </g>
+                                        </svg> 
+                                    </div>
+
+                                    <div className="downvotes">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="bg-inherit" width="20px" height="20px" viewBox="0 0 512 512" version="1.1" class="rotate-180">
+                                            <title>triangle-filled</title>
+                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="drop" fill="#000000" transform="translate(32.000000, 42.666667)">
+                                            <path d="M246.312928,5.62892705 C252.927596,9.40873724 258.409564,14.8907053 262.189374,21.5053731 L444.667042,340.84129 C456.358134,361.300701 449.250007,387.363834 428.790595,399.054926 C422.34376,402.738832 415.04715,404.676552 407.622001,404.676552 L42.6666667,404.676552 C19.1025173,404.676552 7.10542736e-15,385.574034 7.10542736e-15,362.009885 C7.10542736e-15,354.584736 1.93772021,347.288125 5.62162594,340.84129 L188.099293,21.5053731 C199.790385,1.04596203 225.853517,-6.06216498 246.312928,5.62892705 Z" id="Combined-Shape">
+                                            </path>
+                                            </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div className="comments" class="flex gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="my-auto"><path d="M13,11H7a1,1,0,0,0,0,2h6a1,1,0,0,0,0-2Zm4-4H7A1,1,0,0,0,7,9H17a1,1,0,0,0,0-2Zm2-5H5A3,3,0,0,0,2,5V15a3,3,0,0,0,3,3H16.59l3.7,3.71A1,1,0,0,0,21,22a.84.84,0,0,0,.38-.08A1,1,0,0,0,22,21V5A3,3,0,0,0,19,2Zm1,16.59-2.29-2.3A1,1,0,0,0,17,16H5a1,1,0,0,1-1-1V5A1,1,0,0,1,5,4H19a1,1,0,0,1,1,1Z" /></svg>
+                                    <p class="">{post.comments}</p>
+                                </div>
                             </div>
+                            
+                            
                             <div className="bookmark-share" class="flex gap-4">
                                 <div className="bookmark" class="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" class="my-auto">
