@@ -10,10 +10,10 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        
         <Route path='/' element={<Onboarding />} />
         <Route path='/signup' element={<Signup/>} />
         <Route path='/homepage' element={<Homepage />} />
+        <Route path='/createpost' element={<Createpost />} />
         <Route path='/viewpost/:postid' element={<Viewpost />} />
         <Route path='/viewprofile/:username' element={<Viewprofile />} />
       </Routes>
