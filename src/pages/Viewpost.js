@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import useFetchPost from "../hooks/useFetchPost";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
+import { Link } from 'react-router-dom';
 
 const Viewpost = () => {
     const { postid } = useParams()
@@ -53,10 +54,13 @@ const Viewpost = () => {
                                     <img src="https://www.shutterstock.com/image-illustration/cybernetic-visions-reloaded-3d-illustration-600w-1555158278.jpg"
                                         className="object-cover"></img>
                                 </div>
+                                
                                 <div className="ml-4 ">
+                                <Link to={'/viewprofile/' + data.user}>
                                     <div>
                                         <p>Posted by <span className="text-d-lasalle font-bold ">@{data.user}</span></p>
                                     </div>
+                                </Link>
                                     <div className="text-stone-400 ">
                                         <p>1 day ago</p>
                                     </div>
