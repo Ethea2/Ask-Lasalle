@@ -9,7 +9,7 @@ const Homepage = () => {
     
     return (
         <>
-            <div className="nav">
+            <div className="nav" class="sticky top-0 z-50">
                 <Navbar /> 
             </div>
 
