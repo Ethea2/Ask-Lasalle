@@ -21,7 +21,7 @@ const Viewprofile = () => {
 
         {user &&
                 <div className="user-info" class="w-3/4 m-auto mt-8 p-6">
-                    <div className="user-inf-content" class="w-full flex">
+                    <div className="user-info-content" class="w-full flex">
                         <div className="profile-pic" class="w-2/12">
                             <img src={user.img} class="block rounded-full object-cover overflow-hidden"/>
                         </div>
@@ -33,7 +33,7 @@ const Viewprofile = () => {
                                 <p class="text-d-lasalle font-semibold mb-6">@{user.user}</p>
                                 
                             </div>
-                            <div className="user-bio">
+                            <div className="user-bio" class="mt-0">
                                 <p>{user.bio}</p>
                             </div>
                         </div>

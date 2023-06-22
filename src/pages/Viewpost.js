@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import useFetchPost from "../hooks/useFetchPost";
 import { useEffect, useState } from "react";
-import Postcard from "../components/Postcard";
+import PostcardFull from "../components/PostcardFull";
 import Navbar from "../components/Navbar";
 
 const Viewpost = () => {
@@ -21,22 +21,16 @@ const Viewpost = () => {
             <div className="nav">
                 <Navbar/>
             </div>
+
             {errorLoading && <div>{errorLoading}</div>}
             {isLoading && <div>loading...</div>}
             {data &&
                 <div className="post" class="w-3/5 m-auto mt-12">
-                    {/* <div>
-                        {data.title}
-                    </div>
-                    <div>
-                        {data.comments}
-                    </div>
-                    <div>
-                        @{data.user}
-                    </div> */}
+                    <PostcardFull post={data} key={data.postid}></PostcardFull>
 
-                    <Postcard post={data} key={data.postid}></Postcard>
                 </div>
+
+
             }
 
             <div className="comment-section" class="w-3/5 m-auto mt-6">
