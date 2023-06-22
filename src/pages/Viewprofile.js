@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 import useFetchUser from "../hooks/useFetchUser"
 import useFetchFiltered from "../hooks/useFetchFiltered"
 import Postcard from "../components/Postcard"
@@ -47,6 +47,7 @@ const Viewprofile = () => {
                 <a href="#">Posts</a>
                 <a href="#">Bookmarks</a>
                 <a href="#">Create Post</a>
+                <Link to={"/viewprofile/" + username + "/edit"}className="text-red-600">View Profile as a User</Link>
             </div>
         </div>
 
