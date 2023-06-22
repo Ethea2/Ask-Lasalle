@@ -1,16 +1,6 @@
 const Navbar = () => {
     return (
-        <nav className="navbar" 
-             class="
-                flex 
-                bg-stone-400
-                justify-between 
-                items-center 
-                sticky
-                top-0 
-                h-auto 
-                p-2.5
-                overflow-hidden">
+        <nav className="navbar" class="flex bg-stone-400 justify-between items-center sticky top-0 h-auto p-2.5 overflow-hidden">
             <div className="logo" class="bg-emerald-900 rounded p-2.5">
                 <p class="text-white">Ask Lasalle ?</p>
             </div>
