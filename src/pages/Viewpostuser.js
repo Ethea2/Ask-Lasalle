@@ -26,6 +26,10 @@ const Viewpostuser = () => {
             {isLoading && <div>loading...</div>}
             {data &&
                 <div className="post" class="w-3/5 m-auto mt-12">
+                    <div class="flex gap-2 p-4 bg-light-blue-gray w-full rounded-xl mb-4">
+                        <p class="ease-in duration-75 hover:font-bold">Delete</p>
+                        <p class="ease-in duration-75 hover:font-bold">Edit</p>
+                    </div>
                     <PostcardFull post={data} key={data.postid}></PostcardFull>
                     <span className="text-red-600">Viewing as user.</span>
                 </div>

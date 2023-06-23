@@ -1,7 +1,10 @@
 import Navbar from "../components/Navbar";
 import { Link } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 const Createpost = () => {
+
+    const navigate = useNavigate();
 
     return (
 
@@ -33,8 +36,8 @@ const Createpost = () => {
                 </div>
 
                 <div className="upload" class="flex justify-between gap-4">
-                    <button class="px-4 py-2 bg-green-600 rounded-lg">Post</button>
-                    <button class="px-4 py-2 bg-stone-300 rounded-lg">Cancel</button>
+                    <Link to="/homepage"><button class="px-4 py-2 bg-green-600 rounded-lg">Post</button></Link>
+                    <button class="px-4 py-2 bg-stone-300 rounded-lg" onClick={() => navigate(-1)}>Cancel</button>
                 </div>
             </div>
         </div>

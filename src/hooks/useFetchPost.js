@@ -23,7 +23,7 @@ const useFetchPost = (url, postid) => {
                 setErrorLoading(err.message)
                 setIsLoading(false)
             })
-    })
+    }, [errorLoading])
     
     return { data, isLoading, errorLoading }
 }

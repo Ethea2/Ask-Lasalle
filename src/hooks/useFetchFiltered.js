@@ -21,7 +21,7 @@ const useFetchFiltered = (url, user) => {
                 setErrorLoading(err.message)
                 setIsLoading(false)
             })
-    })
+    }, [errorLoadingFiltered])
     
     return { dataFiltered, isLoadingFiltered, errorLoadingFiltered }
 }

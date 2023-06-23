@@ -17,8 +17,8 @@ const Navbar = () => {
                 <div className="notifications" class="bg-sky p-2.5 rounded-xl">
                     <p>Notifs</p>
                 </div>
-                <div className="user" class="bg-sky p-2.5 rounded-xl">
-                    <p>@patty_arao</p>
+                <div className="logout" class="bg-sky p-2.5 rounded-xl">
+                    <Link to="/"><p>Logout</p></Link>
                 </div>
             </div>
         </nav>

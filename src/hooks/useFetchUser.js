@@ -23,7 +23,7 @@ const useFetchUser = (url, username) => {
                 setErrorLoading(err.message)
                 setIsLoading(false)
             })
-    })
+    }, [errorLoading])
     return { user, isLoading, errorLoading }
 
 }
