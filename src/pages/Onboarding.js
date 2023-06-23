@@ -3,16 +3,19 @@ import { Link } from 'react-router-dom'
 const Onboarding = () => {
     return (
         <>
-            <div className="w-screen h-screen flex items-center justify-center bg-d-lasalle">
-                <div className="w-1/3 text-center">
-                    <span className="text-9xl text-white">Ask</span>
-                    <span className="text-9xl text-l-lasalle">Lasalle</span>
-                    <p className="text-xl m-5 font-bold">The all in one place where Lasallians can ask their questions.</p>
-                    <div>
-                        <label htmlFor="email" className="block mb-2 text-sm font-medium text-left text-gray-900 dark:text-white">Your email</label>
+            <div className="heading" class="w-8/12 py-6 rounded-2xl m-auto my-10 bg-dark-navy">
+                <p class="text-center font-black text-9xl">
+                    <span className="text-light-blue-gray">Ask</span>
+                    <span className="lasalle-logo" class="text-dark-green">Lasalle</span>
+                </p>
+                
+                <p class="mt-6 text-lg text-center font-semibold text-white">The all in one place where Lasallians can ask their questions.</p>
+            </div>
+                    <div className="input-email" class="mb-2 w-8/12 m-auto bg-dark-navy p-4 rounded-2xl border-2 border-teal">
+                        <label htmlFor="email" className="block text-sm font-medium text-left text-teal mb-2">Your email</label>
                         <input type="email" name="email" id="email" className="bg-lasalle-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="name@dlsu.edu.ph" required="" />
                     </div>
-                    <div className="mt-3 mb-10">
+                    <div className="input-password" class="mt-2 w-8/12 m-auto bg-dark-navy p-4 rounded-2xl border-2 border-teal">
                         <label htmlFor="password" className="block mb-2 text-sm font-medium text-left text-gray-900 dark:text-white">Password</label>
                         <input type="password" name="password" id="password" placeholder="••••••••" className="bg-lasalle-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required="" />
                     </div>
@@ -29,8 +32,8 @@ const Onboarding = () => {
                         </Link>
                     </div>
                     <div className="mt-12 sticky bottom-0">Don't have an account? <span className="font-bold text-sky-600"><Link to="/signup">Sign-up</Link></span> now!</div>
-                </div>  
-            </div>
+                 
+            
         </>
 
     )
