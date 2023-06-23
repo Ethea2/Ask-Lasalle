@@ -19,9 +19,9 @@ const Viewpostuser = () => {
     return (
         <>
 
-            <div className="nav">
-                <Navbar/>
-            </div>
+        <div className="nav" class="sticky top-0 z-50">
+            <Navbar></Navbar>
+        </div>
             {errorLoading && <div>{errorLoading}</div>}
             {isLoading && <div>loading...</div>}
             {data &&

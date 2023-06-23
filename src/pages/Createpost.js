@@ -10,7 +10,9 @@ const Createpost = () => {
 
        <>
 
-        <Navbar/>
+        <div className="nav" class="sticky top-0 z-50">
+            <Navbar></Navbar>
+        </div>
        
         <div className="post-details" class="w-4/5 m-auto my-16">
             <div className="heading" class=" w-4/5 mx-auto my-8">

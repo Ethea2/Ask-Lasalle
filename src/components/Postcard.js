@@ -27,7 +27,7 @@ const Postcard = ({ post }) => {
 
     return (
         <>
-            <div className="postcard" class="h-48 bg-light-blue-gray flex rounded-2xl m-auto mb-4">
+            <div className="postcard" class="h-56 bg-light-blue-gray flex rounded-2xl m-auto mb-4">
 
                 <div className="post-container" class="w-full p-4 flex flex-col justify-between">
                     <div className="user-info " class="w-full p-2 h-1/4 flex gap-2">

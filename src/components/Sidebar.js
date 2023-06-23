@@ -16,7 +16,7 @@ const Sidebar = () => {
                     <p class="text-white font-bold">Tags and Filters</p>
                 </div>
 
-                <div className="navigation-area" class="border-2 border-dark-navy bg-light-blue-gray">
+                <div className="navigation-area" class="border-2 rounded-b-2xl border-dark-navy bg-light-blue-gray">
                     <div className="sort-dropdown" class="group p-4 pb-0 pt-4">
                         <button class="ease-in duration-75 block bg-teal p-4 border-2 border-dark-navy rounded-2xl w-full text-white font-semibold">Sort by...</button>
                             <div className="filters" class="hidden mt-2 ease-in duration-75 group-hover:block hover:block bg-white rounded-2xl py-2">
@@ -74,8 +74,8 @@ const Sidebar = () => {
                         </div>
 
                         <div className="select-buttons" class="flex justify-between">
-                            <button class="bg-neutral-300 p-2 rounded ease-in duration-75 hover:bg-neutral-400">Clear</button>
-                            <button class="bg-neutral-300 p-2 rounded ease-in duration-75 hover:bg-neutral-400">Sort & Filter</button>
+                            <button class="bg-teal text-white p-2 px-4 rounded ease-in duration-75 hover:bg-mint">Clear</button>
+                            <button class="bg-teal text-white p-2 px-4 rounded ease-in duration-75 hover:bg-mint">Sort & Filter</button>
                         </div>
                     </div>
                 </div>

@@ -1,57 +1,55 @@
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const Signup = () => {
+
+    const navigate = useNavigate();
+
     return (
         <>
-            <div className="container" class="h-1/2 w-2/4 py-20 rounded-2xl m-auto mt-10 bg-dark-navy">
-                <p class="text-center font-black text-9xl">
-                    <span className="text-light-blue-gray">Ask</span>
-                    <span className="lasalle-logo" class="text-dark-green">Lasalle</span>
-                </p>
 
-                <p class="mt-6 text-lg text-center font-semibold text-white">The all in one place where Lasallians can ask their questions.</p>
+            <div className="header-container" class="w-2/4 m-auto mt-6 mb-6 p-4 bg-dark-navy border-4 border-teal rounded-2xl">
+                <div className="heading" class="w-3/4 m-auto mt-2.5">
+                    <p class="text-center text-mint font-black text-3xl mb-4">
+                        Join us today!
+                    </p>
+                </div>
 
-                <div className="input-fields" class="w-3/5 m-auto mt-6 p-4 rounded-2xl">
+                <hr class="h-2 w-3/4 mx-auto my-6"></hr>
 
-                    <div className="mt-3 w-full flex flex-row justify-center">
-                        <div className="w-2/3">
-                            <label htmlFor="username" className="block mb-2 text-sm font-medium text-left  text-white">Username</label>
-                            <input type="text" className="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required="" />
-                        </div>
+                <div className="input-fields" class="w-3/4 m-auto">
+                    <div className="input-username" class="w-full m-auto mb-6 flex flex-col justify-start">
+                        <label htmlFor="username" class="text-white text-xs mb-0.5">Username</label>
+                        <input type="text" required="" class="p-2 rounded-lg"/>
                     </div>
 
-                    <div className="mt-3 w-full flex flex-row justify-center">
-                        <div className="w-2/3">
-                            <label htmlFor="email" className="block mb-2 text-sm font-medium text-left  text-white">Email</label>
-                            <input type="email" name="email" id="email" className="bg-white border border-gray-300 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required="" />
-                        </div>
+                    <div className="input-email" class="w-full m-auto mb-6 flex flex-col justify-start">
+                        <label htmlFor="email" class="text-white text-xs mb-0.5">Email</label>
+                        <input type="email" name="email" id="email" required="" class="p-2 rounded-lg"/>
                     </div>
 
-                    <div className="mt-3 w-full flex flex-row justify-center">
-                        <div className="w-2/3">
-                            <label htmlFor="password" className="block mb-2 text-sm font-medium text-left text-white">Password</label>
-                            <input type="password" name="password" id="password" className="bg-white border border-gray-300 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required="" />
-                        </div>
+                    <div className="input-password" class="w-full m-auto mb-6 flex flex-col justify-start">
+                        <label htmlFor="password" class="text-white text-xs mb-0.5">Password</label>
+                        <input type="password" name="password" id="password" required="" class="p-2 rounded-lg"/>
                     </div>
 
-                    <div className="mt-3 w-full flex flex-row justify-center">
-                        <div className="w-2/3">
-                            <label htmlFor="password" className="block mb-2 text-sm font-medium text-left text-white">Confirm Password</label>
-                            <input type="password" name="password" id="password" className="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required="" />
-                        </div>
-                    </div>
-                    
-                    <div className="mt-10 flex justify-center">
-                        <Link to="/homepage" class="relative inline-flex items-center px-12 py-3 overflow-hidden text-lg font-medium text-emerald-600 border-2 border-emerald-600 rounded-full hover:text-white group hover:bg-gray-50">
-                            <span class="absolute left-0 block w-full h-0 transition-all bg-emerald-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
-                            <span class="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                            </span>
-                            <span class="relative">Create Account</span>
-                        </Link>
+                    <div className="input-password-confirmation" class="w-full m-auto mb-6 flex flex-col justify-start">
+                        <label htmlFor="password" class="text-white text-xs mb-0.5">Confirm Password</label>
+                        <input type="password" name="password" id="password" required="" class="p-2 rounded-lg"/>
                     </div>
                 </div>
+
+                <div className="create-acc-button" class="flex justify-center mt-6">
+                    <Link to="/homepage">
+                        <button class="w-max py-2 px-6 rounded-xl bg-teal ease-in duration-75 hover:bg-mint hover:text-dark-navy hover:font-semibold">Create Account</button>
+                    </Link>
+                </div>
+
+                <div className="cancel-button" class="flex justify-center mt-6">
+                    <button class="text-white underline text-xs" onClick={() => navigate(-1)}>Cancel</button>
+                </div>
             </div>
+        
         </>
     )
 }

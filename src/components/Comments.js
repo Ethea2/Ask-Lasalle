@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import { toast } from 'react-toastify';
 import Sharemodal from "./Sharemodal";
+
 const Comments = ({ comment }) => {
     const [saved, setSaved] = useState(false)
     const [share, setShare] = useState(false)
@@ -26,7 +27,7 @@ const Comments = ({ comment }) => {
 
     return (
         <>
-            <div className="comment" class="mb-4 bg-almost-white border border-dark-navy rounded-2xl bg-stone-300 flex">
+            <div className="comment" class="mb-4 bg-light-blue-gray border border-dark-navy rounded-2xl flex">
                 <div className="main-content" class="w-full py-2 px-4">
                     <p class="p-2"><Link to={'/viewprofile/' + comment.user}><span class="font-bold text-d-lasalle">@{comment.user}</span> </Link>replied...</p>
 

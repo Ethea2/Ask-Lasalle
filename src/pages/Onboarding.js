@@ -3,26 +3,31 @@ import { Link } from 'react-router-dom'
 const Onboarding = () => {
     return (
         <>
-            <div className="container" class="h-1/2 w-2/4 py-20 rounded-2xl m-auto mt-20 bg-dark-navy">
-                <p class="text-center font-black text-9xl">
-                    <span className="text-light-blue-gray">Ask</span>
-                    <span className="lasalle-logo" class="text-dark-green">Lasalle</span>
-                </p>
+            <div className="header-container" class="w-2/4 m-auto mt-8 p-8 bg-dark-navy border-4 border-teal rounded-2xl">
+                <div className="heading" class="w-3/4 m-auto">
+                    <p class="text-center font-black text-5xl mb-4">
+                        <span className="text-light-blue-gray">Ask</span>
+                        <span className="lasalle-logo" class="text-dark-green">Lasalle</span>
+                    </p>
 
-                <p class="mt-6 text-lg text-center font-semibold text-white">The all in one place where Lasallians can ask their questions.</p>
+                    <p class="text-center text-white italic">Know each other better</p>
+                </div>
 
-                <div className="input-fields" class="w-3/5 m-auto mt-6 p-4 rounded-2xl">
-                    <div className="input-email" class="mb-2">
-                        <label htmlFor="email" className="block text-sm font-medium text-left text-teal mb-2">Your email</label>
-                        <input type="email" name="email" id="email" className="bg-lasalle-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="name@dlsu.edu.ph" required="" />
+                <hr class="h-2 w-3/4 mx-auto my-8"></hr>
+
+                <div className="input-fields" class="w-3/4 m-auto">
+                    <div className="input-email" class="w-full m-auto mb-6 flex flex-col justify-start">
+                            <label htmlFor="email" class="text-white text-xs mb-0.5">Your email</label>
+                            <input type="email" name="email" id="email" placeholder="name@dlsu.edu.ph" required="" class="p-2 rounded-lg"/>
                     </div>
-                    <div className="input-password" class="mt-2">
-                        <label htmlFor="password" className="block text-sm font-medium text-left text-teal mb-2">Password</label>
-                        <input type="password" name="password" id="password" placeholder="••••••••" className="bg-lasalle-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required="" />
+                    
+                    <div className="input-password" class="w-full m-auto flex flex-col justify-start">
+                            <label htmlFor="password" class="text-white text-xs mb-0.5">Password</label>
+                            <input type="password" name="password" id="password" placeholder="••••••••" required="" class="p-2 rounded-lg"/>
                     </div>
 
-                    <div className="flex justify-center mt-6">
-                        <Link to="/homepage" className="relative inline-flex items-center justify-start py-3 pl-12 pr-14 overflow-hidden font-semibold text-white transition-all duration-150 ease-in-out rounded hover:pl-14 hover:pr-12 bg-lasalle-white group">
+                    <div className="signin-button" class="flex justify-center mt-6">
+                        <Link to="/homepage" className="relative inline-flex items-center justify-start py-3 pl-12 pr-14 overflow-hidden font-semibold text-white transition-all duration-150 ease-in-out rounded hover:pl-14 hover:pr-12 hover:bg-mint group">
                             <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out group-hover:h-full"></span>
                             <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
                                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -33,11 +38,10 @@ const Onboarding = () => {
                             <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">Sign-in</span>
                         </Link>
                     </div>
-
-                    <div className="mt-20 sticky bottom-0 text-white text-center bg-light-blue-gray py-4 rounded-lg">Don't have an account? <span className="font-bold text-dark-navy"><Link to="/signup">Sign-up</Link></span> now!</div>
-
                 </div>
             </div>
+
+            <div className="mt-20 sticky bottom-0 text-black text-center bg-light-blue-gray p-6">Don't have an account? <span className="font-bold text-teal"><Link to="/signup">Sign-up</Link></span> now!</div>
 
 
 

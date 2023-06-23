@@ -12,8 +12,8 @@ const Viewprofile = () => {
     return (
         <>
 
-        <div className="navbar">
-            <Navbar/>
+        <div className="nav" class="sticky top-0 z-50">
+            <Navbar></Navbar>
         </div>
 
         {errorLoading && <div>{errorLoading}</div>}
@@ -21,7 +21,7 @@ const Viewprofile = () => {
 
         {user &&
                 <div className="user-info" class="w-3/4 m-auto mt-8 p-6">
-                    <div className="user-info-content" class="w-full flex border border-green-500">
+                    <div className="user-info-content" class="w-full flex">
                         <div className="profile-pic" class="w-[150px] h-[150px] overflow-hidden border border-green-500 my-auto">
                             <img src={user.img} class="w-[150px] h-[150px] block object-cover"/>
                         </div>
@@ -44,9 +44,9 @@ const Viewprofile = () => {
 
         <div className="user-nav" class="m-auto bg-slate-300">
             <div className="links" class="w-3/4 m-auto p-4 flex flex-row gap-4 justify-start">
-                <a href="#">Posts</a>
-                <a href="#">Bookmarks</a>
-                <Link to="/createpost">Create Post</Link>
+                <a href="#" class="hover:font-semibold hover:text-teal">Posts</a>
+                <a href="#" class="hover:font-semibold hover:text-teal">Bookmarks</a>
+                <Link to="/createpost" class="hover:font-semibold hover:text-teal">Create Post</Link>
             </div>
             <Link to={"/viewprofile/" + username + "/edit" }className="w-3/4 m-auto p-4 flex flex-row gap-4 justify-start text-red-600">View Profile as a User</Link>
         </div>
