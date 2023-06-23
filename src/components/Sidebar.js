@@ -27,10 +27,10 @@ const Sidebar = () => {
 
                     <div className="tags" class="p-4 flex flex-col gap-4 ">
                         <div className="include-tags" class="bg-sky rounded-2xl">
-                            <h3 class="bg-stone-500 p-4 rounded-t-2xl bg-teal border-2 border-dark-navy text-almost-white font-semibold">INCLUDE...</h3>
-                            <div className="list" class="p-2 border-2 border-t-0 border-dark-navy">
+                            <h3 class="p-4 rounded-t-2xl bg-teal border-2 border-dark-navy text-almost-white font-semibold">INCLUDE...</h3>
+                            <div className="list" class="p-2 border-2 rounded-2xl rounded-t-none border-t-0 border-dark-navy">
                                 <div className="college-list" class="group m-4">
-                                    <p class="block duration-75 ease-in group-hover:bg-stone-400 group-hover:px-2 group-hover:py-0.5 group-hover:rounded-lg group-hover:mb-1">College</p>
+                                    <p class="block duration-75 ease-in group-hover:bg-mint group-hover:text-white group-hover:font-semibold group-hover:px-2 group-hover:py-0.5 group-hover:rounded-lg group-hover:mb-1">College</p>
                                     
                                     <div className="college-filters" class="hidden group-hover:block hover:block bg-white rounded-lg py-2 px-1.5 mt-2">
                                         <p class="py-0.5 px-2 rounded-lg mb-2 hover:text-emerald-700 hover:font-bold">Computer Studies</p>
@@ -46,7 +46,7 @@ const Sidebar = () => {
                                 </div>
 
                                 <div className="college-list" class="group m-4">
-                                    <p class="block duration-75 ease-in group-hover:bg-stone-400 group-hover:px-2 group-hover:py-0.5 group-hover:rounded-lg group-hover:mb-1">Degree Program</p>
+                                    <p class="block duration-75 ease-in group-hover:bg-mint group-hover:text-white group-hover:font-semibold group-hover:px-2 group-hover:py-0.5 group-hover:rounded-lg group-hover:mb-1">Degree Program</p>
                                     <div className="college-filters" class="hidden group-hover:block hover:block bg-white rounded-lg py-2 px-1.5 mt-2">
                                         <p class="py-0.5 px-2 rounded-lg mb-2 hover:text-emerald-700 hover:font-bold">BS CS-ST</p>
                                         <p class="py-0.5 px-2 rounded-lg mb-2 hover:text-emerald-700 hover:font-bold">BS CS-CSE</p>
@@ -61,7 +61,7 @@ const Sidebar = () => {
                                 </div>
 
                                 <div className="college-list" class="group m-4">
-                                    <p class="block duration-75 ease-in group-hover:bg-stone-400 group-hover:px-2 group-hover:py-0.5 group-hover:rounded-lg group-hover:mb-1">University Processes</p>
+                                    <p class="block duration-75 ease-in group-hover:bg-mint group-hover:text-white group-hover:font-semibold group-hover:px-2 group-hover:py-0.5 group-hover:rounded-lg group-hover:mb-1">University Processes</p>
                                     <div className="college-filters" class="hidden group-hover:block hover:block bg-white rounded-lg py-2 px-1.5 mt-2">
                                         <p class="py-0.5 px-2 rounded-lg mb-2 hover:text-emerald-700 hover:font-bold">Enlistment</p>
                                         <p class="py-0.5 px-2 rounded-lg mb-2 hover:text-emerald-700 hover:font-bold">Pre-Enlistment</p>
