@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import useFetchPost from "../hooks/useFetchPost";
 import { useEffect, useState } from "react";
 import PostcardFull from "../components/PostcardFull";
@@ -27,7 +27,7 @@ const Viewpost = () => {
             {data &&
                 <div className="post" class="w-3/5 m-auto mt-12">
                     <PostcardFull post={data} key={data.postid}></PostcardFull>
-
+                    <Link to={'/viewpost/' + postid + '/edit'}>View post as user</Link>
                 </div>
 
 
