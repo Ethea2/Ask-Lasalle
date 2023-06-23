@@ -1,14 +1,27 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import { toast } from 'react-toastify'
+import Sharemodal from './Sharemodal'
 const Postcard = ({ post }) => {
-
+    const [share, setShare] = useState(false)
     const [saved, setSaved] = useState(false)
 
     const save = () => {
+
         if (saved) {
             setSaved(false)
         } else {
+            toast("💾 The post has been saved!")
             setSaved(true)
+        }
+    }
+
+    const shareUse = () => {
+
+        if (share) {
+            setShare(false)
+        } else {
+            setShare(true)
         }
     }
 
@@ -90,7 +103,7 @@ const Postcard = ({ post }) => {
                                         </svg>
                                     }
                                 </div>
-                                <div className="share" class="">
+                                <div className="share" class="cursor-pointer" onClick={shareUse}>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z" class="my-auto" /><path d="M10 3v2H5v14h14v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6zm7.586 2H13V3h8v8h-2V6.414l-7 7L10.586 12l7-7z" fill="#000" /></svg>
                                 </div>
                             </div>
@@ -98,6 +111,10 @@ const Postcard = ({ post }) => {
                     </div>
                 </div>
             </div>
+            {
+                share &&
+                <Sharemodal shareUse={shareUse} />
+            }
         </>
     )
 }

@@ -7,10 +7,24 @@ import Viewprofile from "./pages/Viewprofile";
 import Viewprofileuser from "./pages/Viewprofileuser";
 import Createpost from "./pages/Createpost";
 import Viewpostuser from "./pages/Viewpostuser";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <div className="App">
+      <ToastContainer
+        position="bottom-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <Routes>
         <Route path='/' element={<Onboarding />} />
         <Route path='/signup' element={<Signup />} />
