@@ -3,18 +3,24 @@ import { Link } from "react-router-dom";
 const PostcardFull = ({ post, user }) => {
     return (
         <>
-            <div className="postcard" class="h-auto bg-light-blue-gray flex rounded-2xl m-auto mb-4">
+            <div className="postcard" class="h-auto border border-dark-navy bg-light-blue-gray flex rounded-2xl m-auto mb-4">
                 
                 <div className="post-container" class="w-full p-4 flex flex-col justify-between">
                     <div className="user-info "class="w-full p-2 h-1/4 flex gap-2">
                         <div className="rounded-full w-7 h-7 overflow-hidden">
-                            <img src={post.img} class="block object-cover"></img>
+                            <Link to={'/viewprofile/' + post.user}>
+                                <img src={post.img} class="block object-cover"></img>
+                            </Link>
                         </div>
                         
                         <div className="user-details" class="">
-                            <Link to={'/viewprofile/' + post.user}>
-                                    <p>Posted by <span className="text-d-lasalle font-bold">@{post.user}</span></p>
-                            </Link>
+                                <p class="flex gap-1">Posted by
+                                    <span className="text-d-lasalle font-bold">
+                                        <Link to={'/viewprofile/' + post.user}>
+                                            @{post.user}
+                                        </Link>
+                                    </span>
+                                </p>
                         </div>   
                     </div>
 
@@ -22,7 +28,7 @@ const PostcardFull = ({ post, user }) => {
 
                     <div className="post-content" class="p-2 flex flex-col justify-between overflow-hidden">
 
-                        <div className="post-preview" class="h-2/4">
+                        <div className="post-view" class="h-2/4 mb-4">
                             <Link to={'/viewpost/' + post.postid} class="text-2xl font-bold">
                                 <p>{post.title}</p>
                             </Link>
